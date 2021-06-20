@@ -102,3 +102,7 @@ func (ops *innerSortOperationsWithSigners) Swap(i, j int) {
 func sortOperationsWithSigners(ops []*Operation, signers [][]*crypto.PrivateKeySECP256K1R, codec codec.Manager) {
 	sort.Sort(&innerSortOperationsWithSigners{ops: ops, signers: signers, codec: codec})
 }
+
+func SortOperationsWithSigners(ops []*Operation, signers [][]*crypto.PrivateKeySECP256K1R, codec codec.Manager) {
+	sort.Sort(&innerSortOperationsWithSigners{ops: ops, signers: signers, codec: codec})
+}
